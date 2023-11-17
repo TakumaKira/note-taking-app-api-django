@@ -1,7 +1,7 @@
 from rest_framework import viewsets
 from rest_framework import permissions
-from api.serializers import NoteSerializer
-from api.models import Note
+from .serializers import NoteSerializer
+from .models import Note
 
 
 class NoteViewSet(viewsets.ModelViewSet):

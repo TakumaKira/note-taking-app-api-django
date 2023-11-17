@@ -1,8 +1,8 @@
 from rest_framework import serializers
+from .models import Note
 
 
-class NoteSerializer(serializers.Serializer):
-    id = serializers.ReadOnlyField()
-    title = serializers.CharField(max_length=50)
-    content = serializers.CharField(max_length=200)
-    created_at = serializers.DateTimeField()
+class NoteSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Note
+        fields = ['id', 'title', 'content', 'created_at']
